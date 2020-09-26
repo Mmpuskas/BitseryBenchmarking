@@ -15,7 +15,10 @@ target_link_libraries(BitseryBenchmarks
     PRIVATE
         -static-libgcc
         -static-libstdc++
+        Bitsery::bitsery
 )
+
+add_subdirectory(Lib/bitsery)
 
 # Compile with C++17
 target_compile_features(BitseryBenchmarks PRIVATE cxx_std_17)
